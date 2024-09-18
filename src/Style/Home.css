@@ -1,3 +1,4 @@
+/* bannier */
 .container-bannier-home{
     margin-top: 50px;
 }
@@ -19,4 +20,17 @@
     line-height: 68.45px;
     text-align: left;
     color: white;
+}
+
+
+/* cards */
+.container-all-cards-home{
+    background-color: #F6F6F6;
+    margin-top: 50px;
+    border-radius: 25px;
+    padding: 45px;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: auto ;
+   gap: 6.5vw;
 }

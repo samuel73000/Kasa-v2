@@ -1,0 +1,24 @@
+.container-cards-home{
+    width: 480px;
+height: 480px;
+display: flex;
+align-items: end;
+}
+.img-card-home{
+     width: 480px;
+height: 480px;
+border-radius: 25px;
+object-fit: cover;
+}
+.texte-cards-home{
+    display: flex;
+    align-items:flex-end;
+    position:absolute;
+    font-family: Montserrat;
+font-size: 18px;
+font-weight: 700;
+line-height: 25.67px;
+text-align: left;
+color: white;
+margin-left: 10px;
+}
