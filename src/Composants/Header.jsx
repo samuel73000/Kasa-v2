@@ -1,4 +1,4 @@
-import "../Style/Header.css";
+import "../Style/Composants/Header.css";
 import Logo from "../Assets/Logo-pc.png";
 import { Link } from "react-router-dom";
 
@@ -7,7 +7,7 @@ export default function Header() {
     <header>
       <div className="container-header">
         <img src={Logo} alt="logo su site" />
-        <nav className="conatiner-lien-header">
+        <nav>
         <Link className="lien-header" to="/" style={{ marginRight: '4vw' }}>Accueil</Link>
           <Link className="lien-header" to="/"> A Propos</Link>
         </nav>
