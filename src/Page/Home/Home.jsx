@@ -1,4 +1,4 @@
-import "./Home.scss";
+import "./_Home.scss";
 import BannierHome from "../../Assets/Bannier-page-home.png";
 import CardsHome from "../../Composants/CardsHome/CardsHome";
 import { useData } from "../../Composants/DataFetcher"; 

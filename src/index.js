@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './index.scss';
+import './_index.scss';
 import { DataProvider } from "../src/Composants/DataFetcher.jsx";
 import Home from "./Page/Home/Home.jsx";
 import Header from "./Composants/Header/Header.jsx";
