@@ -1,8 +1,28 @@
 import "./_Header.scss";
 import Logo from "../../Assets/Logo-pc.png";
-import { Link } from "react-router-dom";
+import { Link , useLocation} from "react-router-dom";
+import React, { useEffect } from "react";
 
 export default function Header() {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    const link = document.querySelectorAll(".lien-header");
+
+    // Réinitialiser les décorations de texte
+    link.forEach((l) => (l.style.textDecoration = 'none'));
+
+    if (location.pathname === "/") {
+      link[0].style.textDecoration = 'underline'; // ou 'solid' si tu préfères
+    } else if (location.pathname === "/Propos") {
+      link[1].style.textDecoration = 'underline'; // ou 'solid' si tu préfères
+    }
+    
+    console.log(location.pathname);
+  }, [location.pathname]); // Dépendance sur location.pathname pour mettre à jour les styles à chaque changement de chemin
+
+
   return (
     <header>
       <div className="container-header">
