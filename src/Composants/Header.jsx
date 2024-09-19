@@ -9,7 +9,7 @@ export default function Header() {
         <img src={Logo} alt="logo su site" />
         <nav>
         <Link className="lien-header" to="/" style={{ marginRight: '4vw' }}>Accueil</Link>
-          <Link className="lien-header" to="/"> A Propos</Link>
+          <Link className="lien-header" to="/Propos"> A Propos</Link>
         </nav>
       </div>
     </header>
