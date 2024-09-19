@@ -1,7 +1,7 @@
-import "../Style/Home.css";
-import BannierHome from "../Assets/Bannier-page-home.png";
-import CardsHome from "../Composants/CardsHome";
-import { useData } from "../Composants/DataFetcher"; 
+import "./Home.scss";
+import BannierHome from "../../Assets/Bannier-page-home.png";
+import CardsHome from "../../Composants/CardsHome/CardsHome";
+import { useData } from "../../Composants/DataFetcher"; 
 
 export default function Home() {
   const data = useData(); // Utilisation du hook pour obtenir les données

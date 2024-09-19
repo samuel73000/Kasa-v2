@@ -1,5 +1,5 @@
-import "../Style/Composants/Footer.css";
-import logoFooter from "../Assets/Logo-footer-pc.png"
+import "./Footer.scss";
+import logoFooter from "../../Assets/Logo-footer-pc.png"
 export default function Footer (){
     return(
     <footer className="container-footer">

@@ -1,4 +1,4 @@
-import "../Style/Composants/CardsHome.css"
+import "./CardsHome.scss"
 import { Link } from "react-router-dom";
 export default function CardsHome (props){
     return(

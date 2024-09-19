@@ -1,4 +1,4 @@
-import "../Style/Propos.css";
+import "./Propos.scss";
 export default function Propos (){
 return(
     <section>
