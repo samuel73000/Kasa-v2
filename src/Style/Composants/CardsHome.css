@@ -15,10 +15,12 @@ object-fit: cover;
     align-items:flex-end;
     position:absolute;
     font-family: Montserrat;
-font-size: 18px;
+font-size: 22px;
 font-weight: 700;
 line-height: 25.67px;
 text-align: left;
 color: white;
 margin-left: 10px;
+margin-top: 10px;
+width: 200px;
 }
