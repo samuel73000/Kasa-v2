@@ -1,18 +1,11 @@
 import "../Style/Home.css";
-import { useEffect, useState } from "react";
-import axios from "axios";
 import BannierHome from "../Assets/Bannier-page-home.png";
 import CardsHome from "../Composants/CardsHome";
+import { useData } from "../Composants/DataFetcher"; 
 
 export default function Home() {
-  const [data, setData] = useState(null);
+  const data = useData(); // Utilisation du hook pour obtenir les données
 
-  useEffect(() => {
-    axios
-      .get("../Data/data.json")
-      .then((response) => setData(response.data))
-      .catch((error) => console.error(error)); // Gérer les erreurs
-  }, []);
   return (
     <section>
       {/* section bannier */}
