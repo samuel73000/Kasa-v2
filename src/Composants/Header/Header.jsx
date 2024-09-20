@@ -14,9 +14,9 @@ export default function Header() {
     link.forEach((l) => (l.style.textDecoration = 'none'));
 
     if (location.pathname === "/") {
-      link[0].style.textDecoration = 'underline'; // ou 'solid' si tu préfères
+      link[0].style.textDecoration = 'underline';
     } else if (location.pathname === "/Propos") {
-      link[1].style.textDecoration = 'underline'; // ou 'solid' si tu préfères
+      link[1].style.textDecoration = 'underline'; 
     }
     
     console.log(location.pathname);
