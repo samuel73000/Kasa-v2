@@ -3,7 +3,7 @@ import BannierPropos from "../../Assets/Bannier-page-propos.png";
 import Collapse from "../../Composants/Collapse/Collapse";
 export default function Propos (){
 return(
-    <section>
+    <section >
 {/* section bannier */}
 <div className="container-bannier-home">
         <img
@@ -12,8 +12,8 @@ return(
           className="img-bannier-home"
         />
       </div>
-      {/* partie des Collapse */}
-      <div>
+      {/* section Collapse */}
+      <div className="container-collapse">
       <Collapse titre="Fiabilité" contenu=" Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logments, et toutes les informations sont régulierement vérifiées par nos équipes." />
       <Collapse titre="Respect" contenu="La bienveillance fait partie des valeurs fonfatrices de Kasa. Tout comportement discriminatoire ou de pertubation du voisinage entrainera une exclusion de notre plateforme"/>
       <Collapse titre="Service" contenu="La qualité du service est au coeur de notre engagement chez Kasa. Nous veillons a ce que chaque interaction, que ce soit avec nos hotes ou nos locataires, soite empreinte de respect et de bienveillance"/>

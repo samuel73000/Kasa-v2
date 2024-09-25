@@ -1,18 +1,18 @@
 .container-footer {
   background-color: black;
-  margin-top: 50px;
   width: 100%;
-  position: absolute;
+  position:absolute;
   left: 0px;
+  right: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 209px;
   flex-direction: column;
-
+  
   .img-footer {
     width: 122px;
-    height: 39.44px;
+    height: 40px;
     margin-top: 30px;
   }
 
