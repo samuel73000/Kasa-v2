@@ -27,6 +27,9 @@
     .arrow-collapse {
       height: 40px;
     }
+    .arrow-collapse:active{
+      rotate: 180deg;
+    }
   }
   .div-contenu-collapse {
     background-color: #f4f4f4;

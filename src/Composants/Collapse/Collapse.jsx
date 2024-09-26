@@ -6,6 +6,7 @@ export default function Collapse ( props){
 const [open , setOpen] = useState(false);
 
     return(
+        
        <section className="section-collapse">
         <div className="div-titre-collapse">
         <h3 className="titre-collapse">{props.titre}</h3>
