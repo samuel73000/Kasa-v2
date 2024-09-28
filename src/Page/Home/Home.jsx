@@ -1,7 +1,8 @@
 import "./_Home.scss";
 import BannierHome from "../../Assets/Bannier-page-home.png";
 import CardsHome from "../../Composants/CardsHome/CardsHome";
-import { useData } from "../../Composants/DataFetcher"; 
+import { useData } from "../../Composants/DataFetcher";
+
 
 export default function Home() {
   const data = useData(); // Utilisation du hook pour obtenir les données
@@ -21,9 +22,9 @@ export default function Home() {
 
       {data && (
         <div className="container-all-cards-home">
-          {data.map((item, index) => (
+          {data.map((item) => (
             <CardsHome
-              key={index}
+              id={item.id}
               lien={item.cover}
               titreCards={item.title}
               alt={`image de ${item.title}`}
