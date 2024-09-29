@@ -1,80 +1,136 @@
 // partie avec le titre et la photo du proprietaire
 .container-all-titre-proprietaire {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .titre-page-logement {
-    font-family: Montserrat;
-    font-size: 36px;
-    font-weight: 500;
-    line-height: 51.34px;
-    text-align: left;    
-    color: #FF6060;
-
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 51.34px;
+  text-align: left;
+  color: #ff6060;
 }
-.localisation-page-logement{
-    font-family: Montserrat;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 25.67px;
-    text-align: left;   
-    margin-top: -25px; 
-}
-
-.container-proprietaire{
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 70px;
+.localisation-page-logement {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.67px;
+  text-align: left;
+  margin-top: -25px;
 }
 
-.name-page-logement{
-    font-family: Montserrat;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 25.67px;
-    text-align: right;  
-    color: #FF6060; 
-    width: 20px;
+.container-proprietaire {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
 }
-.img-page-logement{
-    width: 64px;
-    height: 64px;
-    border-radius: 50px;
+
+.name-page-logement {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.67px;
+  text-align: right;
+  color: #ff6060;
+  width: 20px;
+}
+.img-page-logement {
+  width: 64px;
+  height: 64px;
+  border-radius: 50px;
 }
 //  tag et etoile
-.container-all-tags-etoile{
-display: flex;
-flex-direction: row;
-justify-content: space-between;
+.container-all-tags-etoile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.container-tags{
-display: flex;
-flex-direction: row;
-gap: 10px;
+.container-tags {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
-.tag{
-font-family: Montserrat;
-font-size: 14px;
-font-weight: 700;
-line-height: 19.96px;
-text-align: center;
-height: 25px;
-background-color: #FF6060;
-border-radius: 20px;
-color: white;
-align-items: center;
-align-content: center;
-width: 155px;
-padding-left: 1%;
-padding-right: 1%;
+.tag {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19.96px;
+  text-align: center;
+  height: 25px;
+  background-color: #ff6060;
+  border-radius: 20px;
+  color: white;
+  align-items: center;
+  align-content: center;
+  width: 155px;
+  padding-left: 1%;
+  padding-right: 1%;
 }
-.container-etoile{
-display: flex;
-gap: 5px;
+.container-etoile {
+  display: flex;
+  gap: 5px;
 }
-.etoile{
-font-size: 26px;
+.etoile {
+  font-size: 26px;
+}
+
+// collapse
+.container-all-collaps-logement {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Assure un espacement entre les éléments */
+  width: 100%;
+}
+
+.section-collapse-logement {
+  display: flex;
+  flex-direction: column; /* Garder le contenu vertical */
+  width: 40%;
+}
+.div-titre-collapse-logement {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  background-color: #ff6060;
+  border-radius: 10px;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  width: 100%;
+}
+.div-contenu-collapse-logement {
+  background-color: #f4f4f4;
+  border-radius: 0px 0px 10px 10px;
+  margin-top: -5px;
+  z-index: -1;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  width: 100%;
+  overflow: hidden;
+  transform-origin: top;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  max-height: 0px;
+}
+
+.div-collapse-reverse {
+  max-height: 0;
+  opacity: 0;
+}
+
+.div-collapse-active {
+  max-height: 150px;
+  opacity: 1;
+}
+
+.contenu-collapse {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 34.22px;
+  text-align: left;
 }

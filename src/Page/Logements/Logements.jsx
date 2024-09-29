@@ -4,16 +4,16 @@ import { useParams } from "react-router-dom"; // Récupère l'ID depuis l'URL
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import Slideshow from "../../Composants/Slideshow/Slideshow";
-
+import Collapse from "../../Composants/Collapse/Collapse";
 export default function Logement() {
   const data = useData(); // Charge les données du logement
   const { id } = useParams(); // Récupère l'ID du logement depuis l'URL
 
   const logement = data.find((item) => item.id === id); // Trouve le logement correspondant à l'ID
-  
+
   return (
     <section>
-    {/* Slideshow */}
+      {/* Slideshow */}
       <Slideshow />
       {/*   titre  */}
       <div className="container-all-titre-proprietaire">
@@ -42,19 +42,32 @@ export default function Logement() {
         </div>
         {/* etoile */}
         <div className="container-etoile">
-        {[...Array(5)].map((_, index) => (
-        <FontAwesomeIcon
-          key={index}
-          icon={faStar}
-          className="etoile"
-          style={{ color: index < logement.rating ? "#FF6060" : "#E3E3E3" }} // Change la couleur en fonction de l'index
-        />
-      ))}
+          {[...Array(5)].map((_, index) => (
+            <FontAwesomeIcon
+              key={index}
+              icon={faStar}
+              className="etoile"
+              style={{ color: index < logement.rating ? "#FF6060" : "#E3E3E3" }} // Change la couleur en fonction de l'index
+            />
+          ))}
         </div>
       </div>
       {/* Collapse */}
-      <div>
-
+      <div className="container-all-collaps-logement">
+        <Collapse
+          titre="Desciption"
+          contenu={logement.description}
+          classSection="section-collapse-logement"
+          classTitre="div-titre-collapse-logement"
+          classContenu="div-contenu-collapse-logement"
+        />
+        <Collapse
+          titre="Équipements"
+          contenu={logement.equipments}
+          classSection="section-collapse-logement"
+          classTitre="div-titre-collapse-logement"
+          classContenu="div-contenu-collapse-logement"
+        />
       </div>
     </section>
   );

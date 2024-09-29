@@ -5,8 +5,8 @@ export default function Collapse(props) {
   const [open, setOpen] = useState(false);
 
   return (
-    <section   className="section-collapse">
-      <div className="div-titre-collapse">
+    <section   className={props.classSection}>
+      <div className={props.classTitre}>
         <h3 className="titre-collapse">{props.titre}</h3>
         <img
           onClick={() => setOpen(!open)}
@@ -17,7 +17,7 @@ export default function Collapse(props) {
       </div>
 
       <div 
-  className={`div-contenu-collapse ${open ? 'div-collapse-active' : 'div-collapse-reverse'}`}
+  className={`${props.classContenu} ${open ? 'div-collapse-active' : 'div-collapse-reverse'}`}
 >
   <p className="contenu-collapse">{props.contenu}</p>
 </div>
