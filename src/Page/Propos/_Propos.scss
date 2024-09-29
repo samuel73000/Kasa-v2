@@ -1,9 +1,14 @@
+.section-propos{
+  min-height: 70vh;
+}
+
 .container-collapse {
   margin-top: 100px;
   margin-bottom: 100px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
   padding-left: 7%;
-  gap: 80px;
+  gap: 60px;
 }

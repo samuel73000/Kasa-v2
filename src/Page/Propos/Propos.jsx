@@ -3,7 +3,7 @@ import BannierPropos from "../../Assets/Bannier-page-propos.png";
 import Collapse from "../../Composants/Collapse/Collapse";
 export default function Propos() {
   return (
-    <section>
+    <section className="section-propos">
       {/* section bannier */}
       <div className="container-bannier-home">
         <img

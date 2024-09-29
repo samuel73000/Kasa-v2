@@ -12,7 +12,7 @@ export default function Logement() {
   const logement = data.find((item) => item.id === id); // Trouve le logement correspondant à l'ID
 
   return (
-    <section>
+    <section className="section-logement">
       {/* Slideshow */}
       <Slideshow />
       {/*   titre  */}
