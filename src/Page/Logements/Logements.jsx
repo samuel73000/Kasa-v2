@@ -10,14 +10,14 @@ export default function Logement() {
   return (
     <section>
       <Slideshow />
-      <div>
-        <div>
-          <h1>{logement.title}</h1>
-          <p>{logement.location}</p>
+      <div className="container-all-titre-proprietaire">
+        <div className="container-titre">
+          <h1 className="titre-page-logement">{logement.title}</h1>
+          <p className="localisation-page-logement">{logement.location}</p>
         </div>
-        <div>
-          <p>{logement.host.name}</p>
-          <img src={logement.host.picture} alt="" />
+        <div className="container-proprietaire">
+          <p className="name-page-logement">{logement.host.name}</p>
+          <img className="img-page-logement" src={logement.host.picture} alt="le proprietaire" />
         </div>
       </div>
     </section>

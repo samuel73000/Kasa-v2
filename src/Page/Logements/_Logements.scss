@@ -1,0 +1,46 @@
+// partie avec le titre et la photo du proprietaire
+.container-all-titre-proprietaire {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+align-items: center;
+}
+.titre-page-logement {
+    font-family: Montserrat;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 51.34px;
+    text-align: left;    
+    color: #FF6060;
+
+}
+.localisation-page-logement{
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.67px;
+    text-align: left;   
+    margin-top: -25px; 
+}
+
+.container-proprietaire{
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 70px;
+}
+
+.name-page-logement{
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25.67px;
+    text-align: right;  
+    color: #FF6060; 
+    width: 20px;
+}
+.img-page-logement{
+    width: 64px;
+    height: 64px;
+    border-radius: 50px;
+}
