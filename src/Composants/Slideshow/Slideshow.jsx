@@ -21,33 +21,46 @@ export default function Slideshow() {
 
   // Fonction pour revenir à l'image précédente
   function precedent() {
-    setIndex(index > 0 ? index - 1 : 4); // Décrémente ou revient à 4
+    setIndex(index > 0 ? index - 1 : logement.pictures.length - 1); // Décrémente ou revient à la dernière image
   }
+
+  // Vérifie s'il y a plus d'une image
+  const plusieursImages = logement.pictures.length > 1;
 
   return (
     <section className="container-Slideshow">
-      <img
-        className="img-fleche-Slideshow-left"
-        src={arrow_left}
-        alt="fleche"
-        onClick={precedent}
-      />
+      {/* Affiche les flèches seulement s'il y a plus d'une image */}
+      {plusieursImages  && (
+        <img
+          className="img-fleche-Slideshow-left"
+          src={arrow_left}
+          alt="fleche"
+          onClick={precedent}
+        />
+      )}
+      
       <img
         className="img-logement-Slideshow"
         src={logement.pictures[index]}
         alt="logement"
-      />{" "}
-      {/* Affiche l'image selon l'index */}
-      <img
-        className="img-fleche-Slideshow-right"
-        src={arrow_right}
-        alt="fleche"
-        onClick={suivant}
       />
-      <p className="compteur-slideshow">
-        {index + 1}/{logement.pictures.length}
-      </p>{" "}
-      {/* Affiche le compteur d'images */}
+
+      {/* Affiche les flèches seulement s'il y a plus d'une image */}
+      {plusieursImages  && (
+        <img
+          className="img-fleche-Slideshow-right"
+          src={arrow_right}
+          alt="fleche"
+          onClick={suivant}
+        />
+      )}
+      
+      {/* Affiche le compteur seulement s'il y a plus d'une image */}
+      {plusieursImages  && (
+        <p className="compteur-slideshow">
+          {index + 1}/{logement.pictures.length}
+        </p>
+      )}
     </section>
   );
 }
