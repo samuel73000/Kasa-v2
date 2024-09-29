@@ -1,37 +1,50 @@
 import "./_Logements.scss";
 import { useData } from "../../Composants/DataFetcher";
-import { useParams } from "react-router-dom"; // Récupère l'ID depuis l'URL
+import { useParams, useNavigate } from "react-router-dom"; // Récupère l'ID depuis l'URL
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import Slideshow from "../../Composants/Slideshow/Slideshow";
 import Collapse from "../../Composants/Collapse/Collapse";
+
 export default function Logement() {
   const data = useData(); // Charge les données du logement
   const { id } = useParams(); // Récupère l'ID du logement depuis l'URL
+  const navigate = useNavigate(); // Hook pour la navigation
+
+  // Vérifie si data est défini et si l'ID est valide
+  if (!data) {
+    return <div>Chargement...</div>; // Affiche un message de chargement si data est indéfini
+  }
 
   const logement = data.find((item) => item.id === id); // Trouve le logement correspondant à l'ID
+
+  // Vérifie si le logement a été trouvé
+  if (!logement) {
+    navigate("/erreur"); // Redirection vers la page d'erreur
+    return null; // Retourne null pour éviter le rendu du composant
+  }
 
   return (
     <section className="section-logement">
       {/* Slideshow */}
-      <Slideshow />
-      {/*   titre  */}
+      <Slideshow logement={logement} />
+      {/* Titre */}
       <div className="container-all-titre-proprietaire">
         <div className="container-titre">
           <h1 className="titre-page-logement">{logement.title}</h1>
           <p className="localisation-page-logement">{logement.location}</p>
         </div>
-        {/* la photo du proprietaire  */}
+        {/* La photo du propriétaire */}
         <div className="container-proprietaire">
           <p className="name-page-logement">{logement.host.name}</p>
           <img
             className="img-page-logement"
             src={logement.host.picture}
-            alt="le proprietaire"
+            alt="le propriétaire"
           />
         </div>
       </div>
-      {/*  tag */}
+      {/* Tag */}
       <div className="container-all-tags-etoile">
         <div className="container-tags">
           {logement.tags.map((tag, index) => (
@@ -40,7 +53,7 @@ export default function Logement() {
             </p>
           ))}
         </div>
-        {/* etoile */}
+        {/* Étoile */}
         <div className="container-etoile">
           {[...Array(5)].map((_, index) => (
             <FontAwesomeIcon
@@ -55,7 +68,7 @@ export default function Logement() {
       {/* Collapse */}
       <div className="container-all-collaps-logement">
         <Collapse
-          titre="Desciption"
+          titre="Description"
           contenu={logement.description}
           classSection="section-collapse-logement"
           classTitre="div-titre-collapse-logement"
