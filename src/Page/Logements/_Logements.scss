@@ -45,9 +45,11 @@ gap: 70px;
     border-radius: 50px;
 }
 //  tag et etoile
-// .container-all-tags-etoile{
-
-// }
+.container-all-tags-etoile{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
 .container-tags{
 display: flex;
 flex-direction: row;
@@ -65,7 +67,14 @@ border-radius: 20px;
 color: white;
 align-items: center;
 align-content: center;
-// width: 155px;
+width: 155px;
 padding-left: 1%;
 padding-right: 1%;
+}
+.container-etoile{
+display: flex;
+gap: 5px;
+}
+.etoile{
+font-size: 26px;
 }

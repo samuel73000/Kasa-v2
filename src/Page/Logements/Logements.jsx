@@ -1,7 +1,10 @@
 import "./_Logements.scss";
 import { useData } from "../../Composants/DataFetcher";
 import { useParams } from "react-router-dom"; // Récupère l'ID depuis l'URL
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 import Slideshow from "../../Composants/Slideshow/Slideshow";
+
 export default function Logement() {
   const data = useData(); // Charge les données du logement
   const { id } = useParams(); // Récupère l'ID du logement depuis l'URL
@@ -33,9 +36,32 @@ export default function Logement() {
             </p>
           ))}
         </div>
-        <div>
-          
-          <p className="etoile"></p>
+        <div className="container-etoile">
+          <FontAwesomeIcon
+            icon={faStar}
+            className="etoile"
+            style={{ color: "#FF6060" }}
+          />
+          <FontAwesomeIcon
+            icon={faStar}
+            className="etoile"
+            style={{ color: "#E3E3E3" }}
+          />
+          <FontAwesomeIcon
+            icon={faStar}
+            className="etoile"
+            style={{ color: "#E3E3E3" }}
+          />
+          <FontAwesomeIcon
+            icon={faStar}
+            className="etoile"
+            style={{ color: "#E3E3E3" }}
+          />
+          <FontAwesomeIcon
+            icon={faStar}
+            className="etoile"
+            style={{ color: "#E3E3E3" }}
+          />
         </div>
       </div>
     </section>
