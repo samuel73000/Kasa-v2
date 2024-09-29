@@ -1,4 +1,4 @@
-// partie avec le titre et la photo du proprietaire
+///////////// partie avec le titre et la photo du proprietaire/////////
 .container-all-titre-proprietaire {
   display: flex;
   flex-direction: row;
@@ -43,11 +43,12 @@
   height: 64px;
   border-radius: 50px;
 }
-//  tag et etoile
+/////////////  tag et etoile ////////////
 .container-all-tags-etoile {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 .container-tags {
   display: flex;
@@ -78,12 +79,13 @@
   font-size: 26px;
 }
 
-// collapse
+// //////////////collapse ///////////////////////
 .container-all-collaps-logement {
   display: flex;
   flex-direction: row;
   justify-content: space-between; /* Assure un espacement entre les éléments */
   width: 100%;
+  // margin-bottom: 14.97%;
 }
 
 .section-collapse-logement {

@@ -63,7 +63,13 @@ export default function Logement() {
         />
         <Collapse
           titre="Équipements"
-          contenu={logement.equipments}
+          contenu={
+            <ul>
+              {logement.equipments.map((equipement, index) => (
+                <li key={index}>{equipement}</li>
+              ))}
+            </ul>
+          }
           classSection="section-collapse-logement"
           classTitre="div-titre-collapse-logement"
           classContenu="div-contenu-collapse-logement"
