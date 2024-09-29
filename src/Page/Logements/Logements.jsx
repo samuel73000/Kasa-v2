@@ -7,6 +7,7 @@ export default function Logement() {
   const { id } = useParams(); // Récupère l'ID du logement depuis l'URL
 
   const logement = data.find((item) => item.id === id); // Trouve le logement correspondant à l'ID
+
   return (
     <section>
       <Slideshow />
@@ -17,7 +18,24 @@ export default function Logement() {
         </div>
         <div className="container-proprietaire">
           <p className="name-page-logement">{logement.host.name}</p>
-          <img className="img-page-logement" src={logement.host.picture} alt="le proprietaire" />
+          <img
+            className="img-page-logement"
+            src={logement.host.picture}
+            alt="le proprietaire"
+          />
+        </div>
+      </div>
+      <div className="container-all-tags-etoile">
+        <div className="container-tags">
+          {logement.tags.map((tag, index) => (
+            <p className="tag" key={index}>
+              {tag}
+            </p>
+          ))}
+        </div>
+        <div>
+          
+          <p className="etoile"></p>
         </div>
       </div>
     </section>
