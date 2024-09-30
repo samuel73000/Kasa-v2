@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  overflow: hidden;
 }
 .img-fleche-Slideshow-left {
   width: 96px;
@@ -17,13 +18,7 @@
   z-index: 1;
   margin-left: -96px;
 }
-.img-logement-Slideshow {
-  width: 100%;
-  height: 415px;
-  z-index: 0;
-  position: relative;
-  border-radius: 25px;
-}
+
 .compteur-slideshow {
   z-index: 1;
   font-family: Montserrat;
@@ -35,6 +30,25 @@
   margin-bottom: -350px;
   color: white;
 }
-@keyframes defilement {
-  
+
+.container-Slideshow {
+  position: relative;
+  width: 100%;
+  height: 415px;
+  overflow: hidden; 
+  border-radius: 25px;
+}
+
+.slideshow-wrapper {
+  display: flex; 
+  width: 99%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out; 
+}
+
+.img-logement-Slideshow {
+  min-width: 100%; 
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
 }

@@ -1,7 +1,7 @@
+import React, { useState } from "react";
 import "./_Slideshow.scss";
 import { useData } from "../../Composants/DataFetcher";
 import { useParams } from "react-router-dom"; // Récupère l'ID depuis l'URL
-import React, { useState } from "react";
 import arrow_left from "../../Assets/arrow_Left.png";
 import arrow_right from "../../Assets/arrow_right.png";
 
@@ -30,7 +30,7 @@ export default function Slideshow() {
   return (
     <section className="container-Slideshow">
       {/* Affiche les flèches seulement s'il y a plus d'une image */}
-      {plusieursImages  && (
+      {plusieursImages && (
         <img
           className="img-fleche-Slideshow-left"
           src={arrow_left}
@@ -38,15 +38,26 @@ export default function Slideshow() {
           onClick={precedent}
         />
       )}
-      
-      <img
-        className="img-logement-Slideshow"
-        src={logement.pictures[index]}
-        alt="logement"
-      />
+
+      {/* Conteneur qui glisse avec l'index */}
+      <div
+        className="slideshow-wrapper"
+        style={{
+          transform: `translateX(-${index * 100}%)`, // Translation en fonction de l'index
+        }}
+      >
+        {logement.pictures.map((picture, idx) => (
+          <img
+            key={idx}
+            className="img-logement-Slideshow"
+            src={picture}
+            alt={`logement ${idx}`}
+          />
+        ))}
+      </div>
 
       {/* Affiche les flèches seulement s'il y a plus d'une image */}
-      {plusieursImages  && (
+      {plusieursImages && (
         <img
           className="img-fleche-Slideshow-right"
           src={arrow_right}
@@ -54,9 +65,9 @@ export default function Slideshow() {
           onClick={suivant}
         />
       )}
-      
+
       {/* Affiche le compteur seulement s'il y a plus d'une image */}
-      {plusieursImages  && (
+      {plusieursImages && (
         <p className="compteur-slideshow">
           {index + 1}/{logement.pictures.length}
         </p>
@@ -64,19 +75,3 @@ export default function Slideshow() {
     </section>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
