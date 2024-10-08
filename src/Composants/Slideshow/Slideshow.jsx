@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./_Slideshow.scss";
 import { useData } from "../../Composants/DataFetcher";
-import { useParams } from "react-router-dom"; // Récupère l'ID depuis l'URL
+import { useParams } from "react-router-dom"; /// Récupère l'ID depuis l'URL
 import arrow_left from "../../Assets/arrow_Left.png";
 import arrow_right from "../../Assets/arrow_right.png";
 
