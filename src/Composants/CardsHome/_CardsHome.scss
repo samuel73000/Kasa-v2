@@ -26,3 +26,22 @@
     width: 200px;
   }
 }
+// version mobile
+@media (max-width: 800px) {
+  .container-cards-home {
+    width: 100%;
+    height: auto;
+    display: flex;
+  
+    .img-card-home {
+      width: 100%;
+      height: 70vw;
+    }
+    .texte-cards-home {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 25.67px;
+    }
+  }
+
+}
