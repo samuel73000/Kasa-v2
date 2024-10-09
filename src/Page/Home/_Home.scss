@@ -2,9 +2,8 @@
 .container-bannier-home {
   margin-top: 50px;
   display: flex;
-align-items: center;
-justify-content: center;
-
+  align-items: center;
+  justify-content: center;
 
   .img-bannier-home {
     width: 100%;
@@ -40,4 +39,36 @@ justify-content: center;
   justify-content: space-between;
   flex-direction: row;
   gap: 60px;
+}
+
+// version mobile
+@media (max-width: 800px) {
+  /*///// bannier /////*/
+  .container-bannier-home {
+    justify-content: left;
+
+    .img-bannier-home {
+      height: 111px;
+    }
+    .titre-bannier-home {
+      font-size: 24px;
+      line-height: 28px;
+      max-width: 70%;
+      justify-content: left;
+      margin-left: 16px;
+    }
+  }
+
+  /*/////////cards ///////*/
+  .container-all-cards-home {
+    background-color: #f6f6f6;
+    margin-top: 50px;
+    border-radius: 25px;
+    padding: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 60px;
+  }
 }

@@ -13,3 +13,16 @@
     color: black;
   }
 }
+// version mobile
+@media (max-width: 800px) {
+  .container-header {
+    .img-header {
+      width: 145px;
+      height: 46.88px;
+    }
+
+    .lien-header {
+      font-size: 12px;
+    }
+  }
+}

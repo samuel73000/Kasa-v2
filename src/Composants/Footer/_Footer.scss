@@ -1,7 +1,7 @@
 .container-footer {
   background-color: black;
   width: 100%;
-  position:absolute;
+  position: absolute;
   left: 0px;
   right: 0px;
   display: flex;
@@ -12,17 +12,31 @@
   gap: 20px;
 }
 
+.img-footer {
+  width: 122px;
+  height: 40px;
+  margin-top: 30px;
+}
+
+.text-footer {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34.22px;
+  color: white;
+}
+// version mobile
+@media (max-width: 800px) {
+  .container-footer {
+    gap: 0px;
+  }
+
   .img-footer {
-    width: 122px;
-    height: 40px;
     margin-top: 30px;
   }
 
   .text-footer {
-    font-family: Montserrat;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 34.22px;
-    color: white;
+    font-size: 12px;
+    line-height: 17.11px;
   }
-
+}

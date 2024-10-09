@@ -26,7 +26,7 @@ export default function Header() {
   return (
     <header>
       <div className="container-header">
-        <img src={Logo} alt="logo su site" />
+        <img src={Logo} alt="logo su site" className="img-header" />
         <nav>
         <Link className="lien-header" to="/" style={{ marginRight: '4vw' }}>Accueil</Link>
           <Link className="lien-header" to="/Propos"> A Propos</Link>
