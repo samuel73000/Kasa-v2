@@ -22,6 +22,7 @@
       color: white;
     }
     .arrow-collapse {
+      cursor: pointer;
       height: 40px;
       transform: rotate(0deg);
       transition: transform 0.5s ease-in-out;

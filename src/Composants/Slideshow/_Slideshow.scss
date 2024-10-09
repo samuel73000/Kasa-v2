@@ -11,12 +11,14 @@
   height: 119.64px;
   z-index: 1;
   margin-right: -95px;
+  cursor: pointer;
 }
 .img-fleche-Slideshow-right {
   width: 96px;
   height: 119.64px;
   z-index: 1;
   margin-left: -96px;
+  cursor: pointer;
 }
 
 .compteur-slideshow {
@@ -51,4 +53,5 @@
   height: 100%;
   object-fit: cover;
   border-radius: 25px;
+  filter: brightness(0.8);
 }
