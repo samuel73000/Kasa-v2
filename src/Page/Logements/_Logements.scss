@@ -139,3 +139,11 @@
   line-height: 34.22px;
   text-align: left;
 }
+
+// version mobile
+@media (max-width: 800px) {
+  .contenu-collapse {
+    font-size: 11px;
+    line-height: 18px;
+  }
+}

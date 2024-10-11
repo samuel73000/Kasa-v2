@@ -32,3 +32,24 @@
     margin-bottom: 5%;
   }
 }
+// version mobile
+@media (max-width: 800px) {
+  .section-page404 {
+    .titre-page404 {
+      font-size: 96px;
+      line-height: 136.69px;
+      margin-top: 7%;
+    }
+    .text-page404 {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 25.34px;
+      text-align: center;
+      width: 90%;
+    }
+    .link-page404 {
+      font-size: 14px;
+      line-height: 19.67px;
+    }
+  }
+}

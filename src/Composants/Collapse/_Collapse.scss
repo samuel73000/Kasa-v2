@@ -44,7 +44,7 @@
     z-index: -1;
     padding-left: 1.5%;
     padding-right: 1.5%;
-    width: 80%;
+    width: 96.9%;
     overflow: hidden; 
     transform-origin: top; 
     transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; 
@@ -70,3 +70,13 @@
     text-align: left;
   }
 
+  @media (max-width: 800px) {
+    .titre-collapse {
+      font-size: 13px;
+      line-height: 18.22px;
+    }
+    .contenu-collapse {
+      font-size: 11px;
+      line-height: 18px;
+    }
+  }
