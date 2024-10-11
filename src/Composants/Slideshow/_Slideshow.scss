@@ -10,14 +10,14 @@
   width: 96px;
   height: 119.64px;
   z-index: 1;
-  margin-right: -95px;
+  margin-right: -6%;
   cursor: pointer;
 }
 .img-fleche-Slideshow-right {
   width: 96px;
   height: 119.64px;
   z-index: 1;
-  margin-left: -96px;
+  margin-left: -6%;
   cursor: pointer;
 }
 
@@ -37,21 +37,47 @@
   position: relative;
   width: 100%;
   height: 415px;
-  overflow: hidden; 
+  overflow: hidden;
   border-radius: 25px;
 }
 
 .slideshow-wrapper {
-  display: flex; 
-  width:101%;
+  display: flex;
+  width: 101%;
   height: 100%;
-  transition: transform 0.5s ease-in-out; 
+  transition: transform 0.5s ease-in-out;
 }
 
 .img-logement-Slideshow {
-  min-width: 100%; 
+  min-width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 25px;
   filter: brightness(0.8);
+}
+
+
+
+
+// version mobile
+@media (max-width: 800px) {
+  .container-Slideshow {
+    margin-top: 50px;
+  }
+  .img-fleche-Slideshow-left {
+    width: 24px;
+    height: 24px;
+  }
+  .img-fleche-Slideshow-right {
+    width: 24px;
+    height: 24px;
+  }
+
+  .compteur-slideshow {
+    display:none;
+  }
+
+  .container-Slideshow {
+    height: 255px;
+  }
 }
