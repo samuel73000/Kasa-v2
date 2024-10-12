@@ -67,7 +67,7 @@
   text-align: center;
   height: 25px;
   background-color: #ff6060;
-  border-radius: 20px;
+  border-radius: 5px;
   color: white;
   align-items: center;
   align-content: center;
@@ -151,7 +151,10 @@
     min-height: 70vh;
   }
   
-  ///// partie avec le titre et la photo du proprietaire
+
+
+
+  /// partie avec le titre et la photo du proprietaire
   .titre-page-logement {
     font-size: 18px;
     line-height: 25.34px;
@@ -187,7 +190,14 @@
 
 
 
-  
+
+
+
+
+
+
+
+
   /////tag et etoile 
   .container-all-tags-etoile {
     flex-direction: column;
