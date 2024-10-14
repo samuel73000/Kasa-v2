@@ -1,4 +1,4 @@
-.section-logement{
+.section-logement {
   min-height: 70vh;
 }
 
@@ -47,7 +47,7 @@
   height: 64px;
   border-radius: 50px;
 }
-/////////// tag et etoile 
+/////////// tag et etoile
 .container-all-tags-etoile {
   display: flex;
   flex-direction: row;
@@ -87,13 +87,13 @@
 .container-all-collaps-logement {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; 
+  justify-content: space-between;
   width: 100%;
 }
 
 .section-collapse-logement {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   width: 40%;
 }
 .div-titre-collapse-logement {
@@ -140,21 +140,13 @@
   text-align: left;
 }
 
-
-
-
-
 // version mobile
 @media (max-width: 800px) {
-
-  .section-logement{
+  .section-logement {
     min-height: 70vh;
   }
-  
 
-
-
-  /// partie avec le titre et la photo du proprietaire
+  // partie avec le titre et la photo du proprietaire
   .titre-page-logement {
     font-size: 18px;
     line-height: 25.34px;
@@ -164,7 +156,6 @@
     line-height: 19.67px;
     margin-top: -10px;
   }
-  
 
   .container-proprietaire {
     display: flex;
@@ -172,7 +163,7 @@
     align-items: center;
     gap: 70px;
   }
-  
+
   .name-page-logement {
     font-family: Montserrat;
     font-size: 18px;
@@ -188,17 +179,7 @@
     border-radius: 50px;
   }
 
-
-
-
-
-
-
-
-
-
-
-  /////tag et etoile 
+  /////tag et etoile
   .container-all-tags-etoile {
     flex-direction: column;
     margin-bottom: 20px;
@@ -220,7 +201,7 @@
   .etoile {
     font-size: 18px;
   }
-  
+
   // ////////collapse
   .container-all-collaps-logement {
     flex-direction: column;
@@ -234,5 +215,4 @@
     font-size: 11px;
     line-height: 18px;
   }
-
 }
