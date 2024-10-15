@@ -16,21 +16,22 @@ export default function Home() {
           alt="bannier du site"
           className="img-bannier-home"
         />
-        <h1 className="titre-bannier-home">Chez vous, partout et ailleurs</h1>
+        <h1 className="titre-bannier-home" >Chez vous, partout et ailleurs</h1>
       </div>
       {/* section des cards */}
 
       {data && (
-        <div className="container-all-cards-home">
+        <div className="container-all-cards-home" id="dd">
           {data.map((item) => (
             <CardsHome
+            key={item.id}
               id={item.id}
               lien={item.cover}
               titreCards={item.title}
               alt={`image de ${item.title}`}
             />
           ))}
-        </div>
+         </div>
       )}
     </section>
   );
