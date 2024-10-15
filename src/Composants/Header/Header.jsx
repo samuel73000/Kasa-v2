@@ -19,7 +19,6 @@ export default function Header() {
       link[1].style.textDecoration = 'underline'; 
     }
     
-    console.log(location.pathname);
   }, [location.pathname]); // Dépendance sur location.pathname pour mettre à jour les styles à chaque changement de chemin
 
 
