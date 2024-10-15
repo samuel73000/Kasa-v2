@@ -21,7 +21,7 @@ export default function Home() {
       {/* section des cards */}
 
       {data && (
-        <div className="container-all-cards-home" id="dd">
+        <div className="container-all-cards-home">
           {data.map((item) => (
             <CardsHome
             key={item.id}
