@@ -7,7 +7,7 @@ export default function Collapse(props) {
   return (
     <section   className={props.classSection}>
       <div className={props.classTitre}>
-        <h3 className="titre-collapse">{props.titre}</h3>
+        <p className="titre-collapse">{props.titre}</p>
         <img
           onClick={() => setOpen(!open)}
           src={arrow}
