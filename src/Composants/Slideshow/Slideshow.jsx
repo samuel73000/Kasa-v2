@@ -7,7 +7,7 @@ import arrow_right from "../../Assets/arrow_right.png";
 
 // Composant Slideshow
 export default function Slideshow() {
-  const data = useData(); 
+  const data = useData();
   const { id } = useParams(); // Récupère l'ID du logement depuis l'URL
 
   const logement = data.find((item) => item.id === id); // Trouve le logement correspondant à l'ID

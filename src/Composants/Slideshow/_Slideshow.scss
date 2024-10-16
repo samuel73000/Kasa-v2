@@ -56,9 +56,6 @@
   filter: brightness(0.8);
 }
 
-
-
-
 // version mobile
 @media (max-width: 800px) {
   .container-Slideshow {
@@ -74,7 +71,7 @@
   }
 
   .compteur-slideshow {
-    display:none;
+    display: none;
   }
 
   .container-Slideshow {

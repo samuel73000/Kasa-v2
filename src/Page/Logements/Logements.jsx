@@ -28,43 +28,49 @@ export default function Logement() {
     <section className="section-logement">
       {/* Slideshow */}
       <Slideshow logement={logement} />
-      {/* Titre */}
-      <div className="container-all-titre-proprietaire">
-        <div className="container-titre">
-          <h1 className="titre-page-logement">{logement.title}</h1>
-          <p className="localisation-page-logement">{logement.location}</p>
+
+      <section className="section-info-logement">
+        {/* Titre */}
+        <div className="container-all-titre-tags">
+          <div className="container-titre">
+            <h1 className="titre-page-logement">{logement.title}</h1>
+            <p className="localisation-page-logement">{logement.location}</p>
+          </div>
+          {/* Tag */}
+          <div className="container-tags">
+            {logement.tags.map((tag, index) => (
+              <p className="tag" key={index}>
+                {tag}
+              </p>
+            ))}
+          </div>
         </div>
-        {/* La photo du propriétaire */}
-        <div className="container-proprietaire">
-          <p className="name-page-logement">{logement.host.name}</p>
-          <img
-            className="img-page-logement"
-            src={logement.host.picture}
-            alt="le propriétaire"
-          />
-        </div>
-      </div>
-      {/* Tag */}
-      <div className="container-all-tags-etoile">
-        <div className="container-tags">
-          {logement.tags.map((tag, index) => (
-            <p className="tag" key={index}>
-              {tag}
-            </p>
-          ))}
-        </div>
-        {/* Étoile */}
-        <div className="container-etoile">
-          {[...Array(5)].map((_, index) => (
-            <FontAwesomeIcon
-              key={index}
-              icon={faStar}
-              className="etoile"
-              style={{ color: index < logement.rating ? "#FF6060" : "#E3E3E3" }} // Change la couleur en fonction de l'index
+
+        <div className="container-all-proprietaire-etoile">
+          {/* La photo du propriétaire */}
+          <div className="container-proprietaire">
+            <p className="name-page-logement">{logement.host.name}</p>
+            <img
+              className="img-page-logement"
+              src={logement.host.picture}
+              alt="le propriétaire"
             />
-          ))}
+          </div>
+          {/* Étoile */}
+          <div className="container-etoile">
+            {[...Array(5)].map((_, index) => (
+              <FontAwesomeIcon
+                key={index}
+                icon={faStar}
+                className="etoile"
+                style={{
+                  color: index < logement.rating ? "#FF6060" : "#E3E3E3",
+                }} // Change la couleur en fonction de l'index
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
       {/* Collapse */}
       <div className="container-all-collaps-logement">
         <Collapse

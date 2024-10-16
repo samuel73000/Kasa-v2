@@ -2,12 +2,18 @@
   min-height: 70vh;
 }
 
-///// partie avec le titre et la photo du proprietaire
-.container-all-titre-proprietaire {
+.section-info-logement {
   display: flex;
   flex-direction: row;
+  margin-bottom: 24px;
+}
+
+///// partie avec le titre et tag
+.container-all-titre-tags {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  width: 50%;
 }
 .titre-page-logement {
   font-family: Montserrat;
@@ -26,34 +32,6 @@
   margin-top: -25px;
 }
 
-.container-proprietaire {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 70px;
-}
-
-.name-page-logement {
-  font-family: Montserrat;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 25.67px;
-  text-align: right;
-  color: #ff6060;
-  width: 20px;
-}
-.img-page-logement {
-  width: 64px;
-  height: 64px;
-  border-radius: 50px;
-}
-/////////// tag et etoile
-.container-all-tags-etoile {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
 .container-tags {
   display: flex;
   flex-direction: row;
@@ -75,8 +53,43 @@
   padding-left: 1%;
   padding-right: 1%;
 }
+
+/////////// proprietaire et etoile
+.container-all-proprietaire-etoile {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 21px;
+  margin-top: 1.6%;
+}
+
+.container-proprietaire {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  gap: 70px;
+}
+
+.name-page-logement {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.67px;
+  text-align: right;
+  color: #ff6060;
+  width: 20px;
+}
+
+
+.img-page-logement {
+  width: 64px;
+  height: 64px;
+  border-radius: 50px;
+}
+
 .container-etoile {
   display: flex;
+  justify-content: right;
   gap: 5px;
 }
 .etoile {
@@ -140,84 +153,91 @@
   text-align: left;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // version mobile
 @media (max-width: 800px) {
   .section-logement {
     min-height: 70vh;
   }
 
+  .section-info-logement {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
 
+  ///// partie avec le titre et tag
+  .container-all-titre-tags {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
 
-
-
-  
-  // partie avec le titre et la photo du proprietaire
   .titre-page-logement {
     font-size: 18px;
-    line-height: 25.34px;
+    line-height: 25.67px;
+    
   }
   .localisation-page-logement {
     font-size: 14px;
-    line-height: 19.67px;
-    margin-top: -10px;
+    line-height: 19.96px;
+    margin-top: -15px;
   }
 
-  .container-proprietaire {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 70px;
-  }
-
-  .name-page-logement {
-    font-family: Montserrat;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 25.67px;
-    text-align: right;
-    color: #ff6060;
-    width: 20px;
-  }
-  .img-page-logement {
-    width: 64px;
-    height: 64px;
-    border-radius: 50px;
-  }
-
-  /////tag et etoile
-  .container-all-tags-etoile {
-    flex-direction: column;
-    margin-bottom: 20px;
-    gap: 24px;
-  }
   .container-tags {
+    display: flex;
     flex-direction: row;
+    gap: 10px;
+    margin-top: -15px;
   }
   .tag {
     font-size: 10px;
     line-height: 14.26px;
-    width: 120px;
+    height: 25px;
+    border-radius: 5px;
+    width: 104px;
     padding-left: 0.5%;
     padding-right: 0.5%;
   }
+
+  /////////// proprietaire et etoile
+  .container-all-proprietaire-etoile {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 21px;
+    margin-top: 0%;
+    margin-bottom: -2.5%;
+  }
+
+  .container-proprietaire {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 41px;
+  }
+
+  .name-page-logement {
+    font-size: 12px;
+    line-height: 17.11px;
+    text-align: right;
+    color: #ff6060;
+    max-width: 25px;
+  }
+  .img-page-logement {
+    width: 32px;
+    height: 32px;
+  }
+
   .container-etoile {
+    display: flex;
+    justify-content: right;
     gap: 5px;
   }
   .etoile {
-    font-size: 18px;
+    font-size: 13px;
   }
 
   // ////////collapse

@@ -10,7 +10,6 @@ import Propos from "./Page/Propos/Propos.jsx";
 import Erreur from "./Page/Erreur/Erreur.jsx";
 import Logements from "./Page/Logements/Logements.jsx";
 
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Router>
@@ -21,12 +20,10 @@ root.render(
           <Route path="/" element={<Home />} />
           <Route path="/Propos" element={<Propos />} />
           <Route path="*" element={<Erreur />} />
-          <Route path="/logement/:id" element={<Logements />}/>
+          <Route path="/logement/:id" element={<Logements />} />
         </Routes>
       </DataProvider>
     </main>
     <Footer />
   </Router>
 );
-
-

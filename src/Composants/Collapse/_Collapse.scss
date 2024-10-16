@@ -2,84 +2,82 @@
   display: flex;
   flex-direction: column;
 }
-  .div-titre-collapse {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    background-color: #ff6060;
-    border-radius: 10px;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
-  }
-    .titre-collapse {
-      font-family: Montserrat;
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 34.22px;
-      text-align: left;
-      color: white;
-    }
-    .arrow-collapse {
-      cursor: pointer;
-      height: 40px;
-      transform: rotate(0deg);
-      transition: transform 0.5s ease-in-out;
-    }
+.div-titre-collapse {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  background-color: #ff6060;
+  border-radius: 10px;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+}
+.titre-collapse {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 34.22px;
+  text-align: left;
+  color: white;
+}
+.arrow-collapse {
+  cursor: pointer;
+  height: 40px;
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-in-out;
+}
 
-    .arrow-collapse-active {
-      transform: rotate(-180deg);
-    }
+.arrow-collapse-active {
+  transform: rotate(-180deg);
+}
 
-    .arrow-collapse-reverse {
-      transform: rotate(0deg);
-    }
-  
+.arrow-collapse-reverse {
+  transform: rotate(0deg);
+}
 
-  .div-contenu-collapse {
-    background-color: #f4f4f4;
-    border-radius: 0px 0px 10px 10px;
-    margin-top: -5px;
-    z-index: -1;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
-    width: 96.9%;
-    overflow: hidden; 
-    transform-origin: top; 
-    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out; 
-    max-height: 0px; 
+.div-contenu-collapse {
+  background-color: #f4f4f4;
+  border-radius: 0px 0px 10px 10px;
+  margin-top: -5px;
+  z-index: -1;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  width: 96.9%;
+  overflow: hidden;
+  transform-origin: top;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  max-height: 0px;
 }
 
 .div-collapse-reverse {
-    max-height: 0; 
-    opacity: 0; 
+  max-height: 0;
+  opacity: 0;
 }
 
 .div-collapse-active {
-    max-height: 150px; 
-    opacity: 1; 
+  max-height: 150px;
+  opacity: 1;
 }
 
+.contenu-collapse {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 34.22px;
+  text-align: left;
+}
 
+@media (max-width: 800px) {
+  .titre-collapse {
+    font-size: 13px;
+    line-height: 18.22px;
+  }
   .contenu-collapse {
-    font-family: Montserrat;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 34.22px;
-    text-align: left;
+    font-size: 11px;
+    line-height: 18px;
   }
-
-  @media (max-width: 800px) {
-    .titre-collapse {
-      font-size: 13px;
-      line-height: 18.22px;
-    }
-    .contenu-collapse {
-      font-size: 11px;
-      line-height: 18px;
-    }
-    .arrow-collapse{
-      height: 20px;
-    }
+  .arrow-collapse {
+    height: 20px;
   }
+}
