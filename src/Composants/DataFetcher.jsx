@@ -6,14 +6,14 @@ export function DataProvider({ children }) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("../Data/data.json") // Utilisation de fetch à la place d'axios
+    fetch("../Data/data.json") // Utilisation de fetch 
       .then((response) => {
         if (!response.ok) {
           throw new Error("Erreur réseau lors du chargement des données");
         }
         return response.json(); // Transformation de la réponse en JSON
       })
-      .then((data) => setData(data)) // Mise à jour de l'état avec les données
+      .then((data) => setData(data)) 
       .catch((error) => console.error(error)); // Gérer les erreurs
   }, []);
 
